@@ -1,0 +1,12 @@
+<!-- ngClass directive is initialized by an object the properties of which are the css class names, and their values are controller methods.-->
+<div class="mdl-card stock-card mdl-shadow--2dp" [ngClass]="{increase: isIncrease(), decrease: isDecrease()}" style="width: 100%;">
+  <span>
+    <div class="mdl-card__title">
+      <h4 style="color: #fff; margin: 0">
+        {{stock?.symbol?.toUpperCase()}}<br />
+        {{stock?.lastTracePriceOnly | currency: 'USD':'symbol':'.2'}}<br />
+        {{stock?.change | currency:'USD':'symbol':'.2'}} ({{stock?.changeInPercent | percent:'.2'}})
+      </h4>
+    </div>
+  </span>
+</div>

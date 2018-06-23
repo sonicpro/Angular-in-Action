@@ -24,7 +24,7 @@ export class StocksService {
     return this.get();
   }
   public remove(stock: string) {
-    stocks.splice(stock.indexOf(stock), 1);
+    stocks.splice(stocks.indexOf(stock), 1);
     return this.get();
   }
   public load(symbols): Observable<Array<StockInterface>>{
